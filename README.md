@@ -29,7 +29,7 @@ Inside your .repo directory, create a local_manifests folder and inside that fol
 	<project path="vendor/sony-oss/timekeep" name="git://github.com/sonyxperiadev/timekeep" groups="device" remote="sony" revision="master" />
 	</manifest>
 
-Now run <br>repo sync</br>
-To build the recovery, on top of your android code root directory type . build/envsetup.sh
-Now run lunch and select aosp_d5103-userdebug
-Now run make -jN recoveryimage. Where N is a number between your cpu's threads and twice your cpu threads.
+Now run <b>repo sync</b>
+To build the recovery, on top of your android code root directory type <b>. build/envsetup.sh</b>
+Now run <b>lunch</b> and select <b>aosp_d5103-userdebug</b>
+Now run <b>make -jN recoveryimage</b>. Where N is a number between your cpu's threads and twice your cpu threads.
