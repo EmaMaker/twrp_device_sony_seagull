@@ -13,20 +13,24 @@ Inside your .repo directory, create a local_manifests folder and inside that fol
 
 	<?xml version="1.0" encoding="UTF-8"?>
 	<manifest>
-	<remove-project name="platform/hardware/qcom/camera" />
-	<project path="device/sony/sepolicy" name="git://github.com/sonyxperiadev/device-sony-sepolicy" groups="device" remote="sony" revision="m-mr1" />
-	<project path="device/sony/common" name="git://github.com/sonyxperiadev/device-sony-common" groups="device" remote="sony" revision="m-mr0" />
-	<project path="device/sony/common-headers" name="git://github.com/sonyxperiadev/device-sony-common-headers" groups="device" remote="sony" revision="aosp/LA.BF64.1.2.2_rb4.7" />
-	<project path="device/sony/common-kernel" name="git://github.com/sonyxperiadev/vendor-sony-kernel" groups="device" remote="sony" revision="aosp/LA.BF64.1.2.2_rb4.7" />
-	<project path="device/sony/seagull" name="git://github.com/EmaMaker/device-sony-seagull" groups="device" remote="sony" revision="twrp-3.0" />
-	<project path="device/sony/yukon" name="git://github.com/sonyxperiadev/device-sony-yukon" groups="device" remote="sony" revision="m-mr1" />
-	<project path="hardware/qcom/camera" name="git://github.com/sonyxperiadev/camera" groups="device" remote="sony" revision="aosp/LA.BF64.1.2.2_rb4.7" />
-	<project path="kernel/sony/msm" name="git://github.com/sonyxperiadev/kernel" groups="device" remote="sony" revision="aosp/LA.BF64.1.2.2_rb4.7" />
-	<project path="vendor/qcom/opensource/dataservices" name="git://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices" groups="device" remote="sony" revision="master" />
-	<project path="vendor/sony-oss/thermanager" name="git://github.com/sonyxperiadev/thermanager" groups="device" remote="sony" revision="master" />
-	<project path="vendor/sony-oss/mkqcdtbootimg" name="git://github.com/sonyxperiadev/mkqcdtbootimg" groups="device" remote="sony" revision="master" />
-	<project path="vendor/sony-oss/macaddrsetup" name="git://github.com/sonyxperiadev/macaddrsetup" groups="device" remote="sony" revision="master" />
-	<project path="vendor/sony-oss/timekeep" name="git://github.com/sonyxperiadev/timekeep" groups="device" remote="sony" revision="master" />
+	<remote name="sony" fetch="git://github.com/sonyxperiadev/" />
+	<remote name="ema" fetch="git://github.com/emamaker/" />
+
+
+
+	<project path="device/sony/sepolicy" name="device-sony-sepolicy" groups="device" remote="sony" revision="m-mr1" />
+	<project path="device/sony/common" name="device-sony-common" groups="device" remote="sony" revision="m-mr0" />
+	<project path="device/sony/common-headers" name="device-sony-common-headers" groups="device" remote="sony" revision="aosp/LA.BF64.1.2.2_rb4.7" />
+	<project path="device/sony/common-kernel" name="vendor-sony-kernel" groups="device" remote="sony" revision="aosp/LA.BF64.1.1_rb1.27" />
+	<project path="device/sony/seagull" name="device-sony-seagull" groups="device" remote="ema" revision="twrp-3.0" />
+	<project path="device/sony/yukon" name="device-sony-yukon" groups="device" remote="sony" revision="m-mr1" />
+	<project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.BF64.1.2.2_rb4.7" />
+	<project path="kernel/sony/msm" name="kernel" groups="device" remote="sony" revision="aosp/LA.BF64.1.2.2_rb4.7" />
+	<project path="vendor/qcom/opensource/dataservices" name="vendor-qcom-opensource-dataservices" groups="device" remote="sony" revision="master" />
+	<project path="vendor/sony-oss/thermanager" name="thermanager" groups="device" remote="sony" revision="master" />
+	<project path="vendor/sony-oss/mkqcdtbootimg" name="mkqcdtbootimg" groups="device" remote="sony" revision="master" />
+	<project path="vendor/sony-oss/macaddrsetup" name="macaddrsetup" groups="device" remote="sony" revision="master" />
+	<project path="vendor/sony-oss/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
 	</manifest>
 
 Now run <b>repo sync</b>
